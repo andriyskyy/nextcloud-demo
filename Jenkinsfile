@@ -9,8 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -f "Dockerfile-DB" -t andriyskyy/NextcloudDB:latest .'
-        sh 'docker build -f "Dockerfile-NC" -t andriyskyy/NC:latest .'
+        sh 'docker build -f "Dockerfile-DB" -t andriyskyy/nextclouddb:latest .'
+        sh 'docker build -f "Dockerfile-NC" -t andriyskyy/nc:latest .'
       }
     }
     stage('Publish') {
