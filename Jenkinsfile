@@ -16,8 +16,8 @@ pipeline {
     stage('Publish') {
       steps {
         withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
-          sh 'docker push andriyskyy/NextcloudDB:latest'
-          sh 'docker push andriyskyy/NC:latest'
+          sh 'docker push andriyskyy/nextclouddb:latest'
+          sh 'docker push andriyskyy/nc:latest'
         }
       }
     }
