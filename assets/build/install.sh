@@ -5,7 +5,8 @@ mkdir -p ${NEXTCLOUD_INSTALL_DIR}
 
 if [[ ! -f ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 ]]; then
   echo "Downloading Nextcloud ${NEXTCLOUD_VERSION}..."
-  RUN wget "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2" -O ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2
+  apt-get -y install wget
+  wget "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2" -O ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2
 fi
 
 echo "Extracting Nextcloud ${NEXTCLOUD_VERSION}..."
