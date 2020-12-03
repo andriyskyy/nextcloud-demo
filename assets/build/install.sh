@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-apt-get update
-apt-get install wget
+apt-get update -y
+apt-get install wget -y
 mkdir -p ${NEXTCLOUD_INSTALL_DIR}
 
 if [[ ! -f ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 ]]; then
