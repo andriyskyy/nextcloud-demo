@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+which wget
 
 mkdir -p ${NEXTCLOUD_INSTALL_DIR}
 
