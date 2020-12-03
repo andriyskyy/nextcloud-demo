@@ -14,9 +14,6 @@ pipeline {
       }
     }
     stage('Publish') {
-      when {
-        branch 'main'
-      }
       steps {
         withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
           sh 'docker push andriyskyy/NextcloudDB:latest'
