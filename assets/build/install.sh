@@ -1,12 +1,13 @@
 #!/bin/bash
 set -e
+wget
 
 mkdir -p ${NEXTCLOUD_INSTALL_DIR}
 
-#if [[ ! -f ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 ]]; then
+if [[ ! -f ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 ]]; then
   echo "Downloading Nextcloud ${NEXTCLOUD_VERSION}..."
   wget -O "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2" ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2
-#fi
+fi
 
 echo "Extracting Nextcloud ${NEXTCLOUD_VERSION}..."
 tar -xf ${NEXTCLOUD_BUILD_DIR}/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2 --strip=1 -C ${NEXTCLOUD_INSTALL_DIR}
