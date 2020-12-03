@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Publish') {
       when {
-        branch 'master'
+        branch 'main'
       }
       steps {
         withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
