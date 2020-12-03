@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+apt-get update
 apt-get install wget
 mkdir -p ${NEXTCLOUD_INSTALL_DIR}
 
