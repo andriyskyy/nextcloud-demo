@@ -7,12 +7,14 @@ pipeline {
     cron('@daily')
   }
   stages {
+    //Building Images from Dockerfile
     stage('Build') {
       steps {
         sh 'docker build -f "Dockerfile-DB" -t andriyskyy/nextclouddb:latest .'
         sh 'docker build -f "Dockerfile-NC" -t andriyskyy/nc:latest .'
       }
     }
+    //Pushing images to public repository
     stage('Publish') {
       steps {
         withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
