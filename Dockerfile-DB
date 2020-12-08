@@ -45,5 +45,3 @@ RUN chmod 755 /sbin/entrypoint.sh
 EXPOSE 5432/tcp
 
 WORKDIR ${PG_HOME}
-
-ENTRYPOINT ["/sbin/entrypoint.sh"]
