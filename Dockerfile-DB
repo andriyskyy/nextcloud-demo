@@ -38,7 +38,7 @@ RUN apt-get update \
 
 COPY runtime/ ${PG_APP_HOME}/
 
-COPY entrypoint.sh /sbin/entrypoint.sh
+COPY PG/entrypoint.sh /sbin/entrypoint.sh
 
 RUN chmod 755 /sbin/entrypoint.sh
 
