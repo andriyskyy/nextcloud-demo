@@ -22,7 +22,7 @@ COPY assets/runtime/ ${NEXTCLOUD_RUNTIME_ASSETS_DIR}/
 
 COPY assets/tools/ /usr/bin/
 
-COPY entrypoint.sh /sbin/entrypoint.sh
+COPY NC/entrypoint.sh /sbin/entrypoint.sh
 
 RUN chmod 755 /sbin/entrypoint.sh
 
